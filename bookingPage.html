@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Document</title>
     <style>
       * {
         margin: 0px;
         padding: 0px;
+        font-family: "Montserrat", sans-serif;
+        box-sizing: border-box;
       }
       .header {
         height: 100px;
@@ -44,6 +48,11 @@
         width: 80%;
         height: 100%;
       }
+      .company {
+        font: 15px;
+        font-weight: 700;
+        line-height: 25px;
+      }
       .singleImg img {
         width: 100%;
         height: auto;
@@ -69,8 +78,18 @@
       .bagDiv div {
         border: 2px solid blue;
       }
-      .dummyP div {
+      .dummyP {
         display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+        /* line-height: 18px; */
+      }
+      .dummy {
+        font-size: 14px;
+        font-weight: 575;
+      }
+      .dummy > p {
+        font-weight: 800;
       }
     </style>
   </head>
@@ -83,11 +102,11 @@
         <div class="singleImg"></div>
       </div>
       <div class="rightBox">
-        <h2>BEWAKOOF</h2>
-        <p class="name">Name of the item</p>
+        <h2 class="company">BEWAKOOF</h2>
+        <p class="name"></p>
         <div class="priceDiv">
-          <p class="price"></p>
-          <p class="stikeOffPrice"></p>
+          <p class="price">000</p>
+          <p class="stikeOffPrice">111</p>
           <p class="discount"></p>
           <p class="tax">Inclusive of taxes</p>
         </div>
@@ -120,17 +139,17 @@
           <p class="dummy">+</p>
         </div>
         <hr />
-        <div>
+        <div class="dummyP">
           <p class="dummy">PRODUCT DESCRIPTION</p>
           <p class="dummy">+</p>
         </div>
         <hr />
-        <div>
+        <div class="dummyP">
           <p class="dummy">15 DAY RETURNS & EXCHANGE</p>
           <p class="dummy">+</p>
         </div>
         <hr />
-        <div>
+        <div class="dummyP">
           <p class="dummy">DELIVERY DETAILS</p>
           <p class="dummy">+</p>
         </div>
@@ -145,10 +164,20 @@
   // getting the item from local storage
   var item = JSON.parse(localStorage.getItem("bookItem"));
   console.log(item);
+  
   // displaying the element of the item
   item.map(function (ele) {
+    // getting main image
     var img = document.createElement("img");
     img.src = ele.mainImage;
     document.querySelector(".singleImg").append(img);
+    // getting item name
+    var name = document.createElement("p");
+    name.innerText = ele.name;
+    document.querySelector(".name").append(name);
+    // getting price
+    var price = document.createElemen("p");
+    price.innerText = ele.price;
+    document.querySelector(".price").append(price);
   });
 </script>
