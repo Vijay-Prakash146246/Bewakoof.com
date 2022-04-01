@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
     <script
@@ -23,11 +24,11 @@
         font-family: "Montserrat", sans-serif;
         box-sizing: border-box;
       }
-      #header {
+      /* #header {
         width: 100%;
         height: 50px;
         background-color: gray;
-      }
+      } */
       #container {
         /* background-color: blue; */
         margin: auto;
@@ -40,6 +41,7 @@
         width: 70%;
         position: relative;
         left: 330px;
+        z-index: -10;
       }
       .top {
         text-align: right;
@@ -172,73 +174,74 @@
   </head>
   <body>
     <!-- <i class="fa-solid fa-indian-rupee-sign"></i> -->
-    <div id="header"></div>
+    <!-- staring of header -->
+<div id="topbar">
+        <div class="left">
+            <div>
+                <a href="">Offer</a>
+                <a href="">Fanbook</a>
+                <a href=""><i class="fa fa-mobile" aria-hidden="true"></i>
+                    Download app</a>
+                <a href="">TriBe Membership</a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="">Contact Us</a>
+            <a href=""><i class="fa fa-truck" aria-hidden="true"></i>
+                Track Order</a>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <div class="navleft">
+            <div id="p-logo">
+                <a href="mens.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#">MEN</a>
+                <div class="Msub-menu">
+                    <ul> <h3>Top Wears</h3>
+                        <li>T-Shirts</li>
+                        <li>Shirts</li>
+                        <li>Jackets</li>
+                        <li>Sweater</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a href="#">WOMEN</a>
+            </div>
+            <div>
+                <a href="#">MOBILE COVERS</a>
+            </div>
+        </div>
+        <div class="navright">
+            <div class="searchForm">
+                <form class="navForm">
+                    <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" name="" id="search" placeholder="Seach by Catagory, Product or collection" |>
+                </form>
+            </div>
+            <div>
+                <a href="signUp.html"> signUp/Login</a>
+            </div>
+            <div>
+                <a href="#"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end of header -->
     <div class="total">
       <p>Men Clothing</p>
       <p id="totalNum">Total Number of items</p>
     </div>
     <div id="container">
-      <!-- <div class="leftBox">
-        <h3 style="color: gray">FILTERS</h3>
-        <div class="filterCol">
-          <p class="filter">Category</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Size</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Brand</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Color</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Design</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Fit</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Sleeve</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Neck</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Ratings</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Discount</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Sort By</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-      </div> -->
-      <!-- <div class="leftBox"> -->
-      <!-- ///////// -->
-      <!-- ////// -->
+      <!-- leftBox -->
       <div class="side-bar">
         <h3 style="color: gray; font-size: 13px;">FILTERS</h3>
         <div class="menu">
@@ -391,7 +394,7 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <!-- <div id="footer"></div> -->
   </body>
 </html>
 <script>
