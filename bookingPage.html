@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .header {
+        height: 100px;
+        width: 100%;
+        background-color: black;
+      }
+      .container {
+        border: 2px solid black;
+        width: 80%;
+        height: 800px;
+        margin: auto;
+        display: flex;
+      }
+      .rightBox {
+        border: 2px solid red;
+        width: 50%;
+        height: 600px;
+      }
+      .leftBox {
+        border: 2px solid blue;
+        width: 50%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+      }
+      .multiImg {
+        border: 2px solid blue;
+        width: 20%;
+        height: 100%;
+      }
+      .singleImg {
+        border: 2px solid blue;
+        width: 80%;
+        height: 100%;
+      }
+      .singleImg img {
+        width: 100%;
+        height: auto;
+      }
+      .priceDiv {
+        display: flex;
+      }
+      .size {
+        display: flex;
+        justify-content: space-between;
+      }
+      .sizeBox {
+        display: flex;
+      }
+      .sizeBox div {
+        height: 30px;
+        width: 30px;
+        border: 2px solid red;
+      }
+      .bagDiv {
+        display: flex;
+      }
+      .bagDiv div {
+        border: 2px solid blue;
+      }
+      .dummyP div {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <p>BOOKING PAGE</p>
+    <div class="header"></div>
+    <div class="container">
+      <div class="leftBox">
+        <div class="multiImg"></div>
+        <div class="singleImg"></div>
+      </div>
+      <div class="rightBox">
+        <h2>BEWAKOOF</h2>
+        <p class="name">Name of the item</p>
+        <div class="priceDiv">
+          <p class="price"></p>
+          <p class="stikeOffPrice"></p>
+          <p class="discount"></p>
+          <p class="tax">Inclusive of taxes</p>
+        </div>
+        <hr />
+        <div class="memberOfferDiv"></div>
+        <p class="memberOffer">
+          TriBe member get an extra discount of 20 and FREE shipping.
+        </p>
+        <p class="learn">Learn more</p>
+        <hr />
+        <div class="size">
+          <p>SELECT SIZE</p>
+          <p>Size Guide</p>
+        </div>
+        <div class="sizeBox">
+          <div>S</div>
+          <div>M</div>
+          <div>L</div>
+          <div>XL</div>
+          <div>2XL</div>
+          <div>3XL</div>
+        </div>
+        <div class="bagDiv">
+          <div>heart</div>
+          <div>ADD TO BAG</div>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">SAVE EXTRA WITH 4 OFFERS</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div>
+          <p class="dummy">PRODUCT DESCRIPTION</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div>
+          <p class="dummy">15 DAY RETURNS & EXCHANGE</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div>
+          <p class="dummy">DELIVERY DETAILS</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
+
+<script>
+  // getting the item from local storage
+  var item = JSON.parse(localStorage.getItem("bookItem"));
+  console.log(item);
+  // displaying the element of the item
+  item.map(function (ele) {
+    var img = document.createElement("img");
+    img.src = ele.mainImage;
+    document.querySelector(".singleImg").append(img);
+  });
+</script>
