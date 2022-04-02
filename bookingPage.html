@@ -357,7 +357,7 @@
   item.map(function (ele) {
     //// getting main image
     var img = document.createElement("img");
-    img.src = ele.mainImage;
+    img.src = ele.mainImg;
     document.querySelector(".singleImg").append(img);
     //// getting item name
     var name = document.createElement("p");
@@ -452,4 +452,10 @@
     localStorage.setItem("cart", JSON.stringify(cartData));
     window.location.reload();
   }
+
+  // go to home
+document.querySelector(".p-logo").addEventListener("click", goToHome);
+function goToHome() {
+  window.location.href = "index.html";
+}
 </script>

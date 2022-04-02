@@ -387,7 +387,7 @@ var total = payData.reduce(function(sum,el,i,arr){
 
 
 var totalS = payData.reduce(function(sum,el,i,arr){
-          return (sum+Number(el.strikedoffprice));
+          return (sum+Number(el.strikeOffPrice));
      },0);
 
 
@@ -400,7 +400,7 @@ var box = document.createElement("div");
 var box1=document.createElement("div");
 
 var img=document.createElement("img");
-img.src=el.image_url;
+img.src=el.mainImg;
 img.style.height="50px";
 img.style.width="40px";
 
