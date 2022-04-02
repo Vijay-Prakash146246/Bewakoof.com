@@ -201,10 +201,10 @@
     <div id="navbar">
         <div class="navleft">
             <div id="p-logo">
-                <a href="mens.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
+                <a href="/index.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
             </div>
             <div>
-                <a href="#">MEN</a>
+                <a href="./menPage.html">MEN</a>
                 <div class="Msub-menu">
                     <ul> <h3>Top Wears</h3>
                         <li>T-Shirts</li>
@@ -215,10 +215,10 @@
                 </div>
             </div>
             <div>
-                <a href="#">WOMEN</a>
+                <a href="./womenPage.html">WOMEN</a>
             </div>
             <div>
-                <a href="#">MOBILE COVERS</a>
+                <a href="/Mobile_main_page.html">MOBILE COVERS</a>
             </div>
         </div>
         <div class="navright">
@@ -229,14 +229,14 @@
                 </form>
             </div>
             <div>
-                <a href="signUp.html"> signUp/Login</a>
+                <a href="/login.html"> signUp/Login</a>
             </div>
             <div>
                 <a href="#"> <i class="fa fa-heart-o" aria-hidden="true"></i>
                 </a>
             </div>
             <div>
-                <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <a href="/Cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
@@ -408,7 +408,7 @@
   menData = [
     //1
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t320/outdoor-adventure-half-sleeve-t-shirt-483047-1648528732-1.jpg",
       name: `Outdoor Adventure Typography`,
       price: "299",
@@ -426,7 +426,7 @@
     },
     //2
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/outdoor-adventure-half-sleeve-t-shirt-483040-1648528754-1.jpg",
       name: `Adventure Typography`,
       price: "299",
@@ -444,7 +444,7 @@
     },
     //3
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1639137606-1.jpg",
       name: `Black T-shirt`,
       price: "349",
@@ -462,7 +462,7 @@
     },
     //4
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/marvel-s-moon-knight-half-sleeve-t-shirt-483814-1648618777-1.jpg",
       name: `Marvel Moon Knight `,
       price: "299",
@@ -480,7 +480,7 @@
     },
     //5
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/motd-panda-half-sleeve-t-shirt-479762-1646211112-1.jpg",
       name: `MOTD Panda T-shirt`,
       price: "299",
@@ -498,7 +498,7 @@
     },
     //6
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/gamer-respawn-half-sleeve-t-shirt-483046-1648447137-1.jpg",
       name: `Gamer Respawn Typography`,
       price: "299",
@@ -516,7 +516,7 @@
     },
     //7
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/hang-loose-relax-half-sleeve-t-shirt-387407-1640087741-1.jpg",
       name: `Black Relax T-shirt`,
       price: "399",
@@ -534,7 +534,7 @@
     },
     //8
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/psy-glow-half-sleeve-t-shirt-482684-1648181945-1.jpg",
       name: `PSY Glow T-shirt
     `,
@@ -553,7 +553,7 @@
     },
     //9
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/nasa-meatball-logo-480033-1647319218-1.jpg",
       name: `NASA Meatball Logo`,
       price: "399",
@@ -571,7 +571,7 @@
     },
     //10
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/jet-black-full-sleeve-t-shirt-1094-1637995554-1.jpg",
       name: `Full Sleeve T-Shirts`,
       price: "349",
@@ -589,7 +589,7 @@
     },
     //11
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/jet-black-vest-210687-1637995879-1.jpg",
       name: `Jet Black Vest`,
       price: "279",
@@ -607,7 +607,7 @@
     },
     //12
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/white-wolf-480065-1647976918-1.jpg",
       name: `Green White Wolf`,
       price: "399",
@@ -643,7 +643,7 @@
     })
     // getting image
     var image = document.createElement("img");
-    image.src = ele.mainImage;
+    image.src = ele.mainImg;
     // getting name
     var name = document.createElement("p");
     name.innerText = ele.name;
@@ -689,6 +689,12 @@
     window.location.href = "bookingPage.html";
   }
 
+// go to home
+document.querySelector(".p-logo").addEventListener("click", goToHome);
+
+function goToHome() {
+  window.location.href = "index.html";
+}
 </script>
 
 <script type="text/javascript">
