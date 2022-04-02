@@ -16,3 +16,5 @@ function formd(){
     console.log(document.querySelector("#search").value)
      
 }
+
+document.querySelector('toMenPage').addEventListener('click',goToMen)
