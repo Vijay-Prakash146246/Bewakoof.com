@@ -91,7 +91,7 @@
         padding-bottom: 15px;
       }
       .total {
-        margin-top: 30px;
+        margin-top: 15px;
         margin-left: 170px;
         display: flex;
       }
@@ -170,6 +170,12 @@
       ::-webkit-scrollbar{
         display: none;
       }
+      .pageLocation {
+        margin-left: 180px;
+        margin-top: 20px;
+        font-size: 12px;
+
+      }
     </style>
   </head>
   <body>
@@ -236,6 +242,7 @@
         </div>
     </div>
     <!-- end of header -->
+    <p class="pageLocation">Home  /  Men Clothing</p>
     <div class="total">
       <p>Men Clothing</p>
       <p id="totalNum">Total Number of items</p>
@@ -623,7 +630,7 @@
 
   // calculating the total number of items
   var totalItems = menData.length;
-  console.log(totalItems);
+  // console.log(totalItems);
   // displaying the total number of items
   document.querySelector("#totalNum").innerText = `(${totalItems})`;
   // displaying the data
@@ -681,8 +688,6 @@
     localStorage.setItem('bookItem',JSON.stringify(bookingItem))
     window.location.href = "bookingPage.html";
   }
-
-//90% is done
 </script>
 
 <script type="text/javascript">
