@@ -381,7 +381,11 @@
      <div id="t1Container">
           <div>
                <!-- src="D:\Unit2D-Proj\img\H1.png" -->
-             <a href="index.html">  <img id="t1img" src="img\bewakooflogo.png" alt="TopHeading Img"> </a>
+<<<<<<< HEAD
+               <img id="t1img" src="img\bewakooflogo.png" alt="TopHeading Img"> 
+=======
+               <img id="t1img" src="img\bewakooflogo.png" alt="TopHeading Img"  >
+>>>>>>> master
           </div>
           <div id="signupLogo">
                <p style="color: #bdd4e5; font-size: 13px;font-weight: 300;"> Signed as</p>
@@ -471,7 +475,7 @@
 
      //implementation of Strike price 
      var totalS = cartData.reduce(function(sum,el,i,arr){
-          return (sum+Number(el.strikedoffprice));
+          return (sum+Number(el.strikeOffPrice));
      },0);
      console.log(totalS);
 
@@ -531,7 +535,7 @@ function triBeFun()
           var box1 = document.createElement("div");
           var image1 = document.createElement("img");
           image1.setAttribute("class","crtImg")
-          image1.src = el.image_url;
+          image1.src = el.mainImg;
           box1.append(image1);
 
           var box2 = document.createElement("div")
@@ -545,16 +549,16 @@ function triBeFun()
           var box3=document.createElement("div");
           var price1=document.createElement("p");
              price1.innerText= "₹"+el.price;
-         var strikedoffprice1 = document.createElement("p");
-         strikedoffprice1.innerText= "₹"+el.strikedoffprice;
+         var strikeOffPrice1 = document.createElement("p");
+         strikeOffPrice1.innerText= "₹"+el.strikeOffPrice;
 
-         strikedoffprice1.setAttribute("class","strikPrice");
+         strikeOffPrice1.setAttribute("class","strikPrice");
 
-          box3.append(price1,strikedoffprice1);
+          box3.append(price1,strikeOffPrice1);
           box3.setAttribute("class","price")
 
           var dis = document.createElement("h4");
-          var x =Number(el.strikedoffprice)-Number(el.price);
+          var x =Number(el.strikeOffPrice)-Number(el.price);
           // console.log(x);
           dis.innerText=`You saved ₹${x}!`
           dis.style.color="green";
@@ -771,7 +775,7 @@ wishListData.map(function(el,i,arr){
      var box1=document.createElement("div");
 
      var imgW=document.createElement("img");
-     imgW.src=el.image_url;
+     imgW.src=el.mainImg;
      imgW.setAttribute("id","imgWishList");
 
      var nameW=document.createElement("h4");
@@ -784,7 +788,7 @@ wishListData.map(function(el,i,arr){
      var p1=document.createElement("p");
      p1.innerText="₹"+el.price;
       var p2 = document.createElement("p");
-      p2.innerText="₹"+el.strikedoffprice;
+      p2.innerText="₹"+el.strikeOffPrice;
       p2.setAttribute("class","strikeP");
       pW.append(p1,p2);
       p2.style.textDecoration="line-through";
@@ -842,25 +846,25 @@ function addToCart(el,i)
 //implementation of Like Section
 var likeData =[  
      {
-      image_url:
+      mainImg:
         "https://images.bewakoof.com/t540/marvel-s-moon-knight-half-sleeve-t-shirt-483825-1648618830-2.jpg",
       name: "Men's Black Marvel Moon Knight Graphic Printed T-shirt",
       price: "1170",
-      strikedoffprice: "2599",
+      strikeOffPrice: "2599",
     },
     {
-      image_url:
+      mainImg:
         "https://images.bewakoof.com/t540/true-love-iphone-13-mobile-cover-470662-1643961727-1.jpg ",
       name: "True Love iPhone 13 Graphic Printed Mobile Cover",
       price: 699,
-      strikedoffprice: 999,
+      strikeOffPrice: 999,
     },
     {
-      image_url:
+      mainImg:
         "https://images.bewakoof.com/t540/friends-logo-boyfriend-t-shirt-frl-234669-1637843380-1.jpg",
       name: "Women's Black Friends Typography Boyfriend T-shirt ",
       price: 1620,
-      strikedoffprice: 3599,
+      strikeOffPrice: 3599,
     },
 ];
 
@@ -878,7 +882,7 @@ likeData.map(function(el,i,arr){
      var boxL1=document.createElement("div");
 
      var imgL=document.createElement("img");
-     imgL.src=el.image_url
+     imgL.src=el.mainImg
      imgL.setAttribute("id","imgYouMayLike");
 
      var nameL=document.createElement("h4");
@@ -890,7 +894,7 @@ likeData.map(function(el,i,arr){
      var priceL1=document.createElement("p");
      priceL1.innerText="₹"+el.price;
      var priceL2=document.createElement("p");
-     priceL2.innerText=el.strikedoffprice;
+     priceL2.innerText=el.strikeOffPrice;
      priceL2.setAttribute("class","strikeP");
      priceLike.append(priceL1,priceL2);
      priceLike.style.display="flex";
@@ -991,4 +995,11 @@ var imgFooter=document.createElement("img");
 imgFooter.src="https://images.bewakoof.com/web/secure-payments-image.png"
 document.querySelector("#itemData").append(imgFooter);
 imgFooter.setAttribute("id","imgFooter");
+
+// go to home
+document.querySelector(".p-logo").addEventListener("click", goToHome);
+
+function goToHome() {
+  window.location.href = "index.html";
+}
 </script>

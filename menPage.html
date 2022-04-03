@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
     <script
@@ -23,11 +24,11 @@
         font-family: "Montserrat", sans-serif;
         box-sizing: border-box;
       }
-      #header {
+      /* #header {
         width: 100%;
         height: 50px;
         background-color: gray;
-      }
+      } */
       #container {
         /* background-color: blue; */
         margin: auto;
@@ -40,6 +41,7 @@
         width: 70%;
         position: relative;
         left: 330px;
+        z-index: -10;
       }
       .top {
         text-align: right;
@@ -89,7 +91,7 @@
         padding-bottom: 15px;
       }
       .total {
-        margin-top: 30px;
+        margin-top: 15px;
         margin-left: 170px;
         display: flex;
       }
@@ -168,77 +170,85 @@
       ::-webkit-scrollbar{
         display: none;
       }
+      .pageLocation {
+        margin-left: 180px;
+        margin-top: 20px;
+        font-size: 12px;
+
+      }
     </style>
   </head>
   <body>
     <!-- <i class="fa-solid fa-indian-rupee-sign"></i> -->
-    <div id="header"></div>
+    <!-- staring of header -->
+<div id="topbar">
+        <div class="left">
+            <div>
+                <a href="">Offer</a>
+                <a href="">Fanbook</a>
+                <a href=""><i class="fa fa-mobile" aria-hidden="true"></i>
+                    Download app</a>
+                <a href="">TriBe Membership</a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="">Contact Us</a>
+            <a href=""><i class="fa fa-truck" aria-hidden="true"></i>
+                Track Order</a>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <div class="navleft">
+            <div id="p-logo">
+                <a href="/index.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
+            </div>
+            <div>
+                <a href="./menPage.html">MEN</a>
+                <div class="Msub-menu">
+                    <ul> <h3>Top Wears</h3>
+                        <li>T-Shirts</li>
+                        <li>Shirts</li>
+                        <li>Jackets</li>
+                        <li>Sweater</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a href="./womenPage.html">WOMEN</a>
+            </div>
+            <div>
+                <a href="/Mobile_main_page.html">MOBILE COVERS</a>
+            </div>
+        </div>
+        <div class="navright">
+            <div class="searchForm">
+                <form class="navForm">
+                    <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" name="" id="search" placeholder="Seach by Catagory, Product or collection" |>
+                </form>
+            </div>
+            <div>
+                <a href="/login.html"> signUp/Login</a>
+            </div>
+            <div>
+                <a href="#"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div>
+                <a href="/Cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end of header -->
+    <p class="pageLocation">Home  /  Men Clothing</p>
     <div class="total">
       <p>Men Clothing</p>
       <p id="totalNum">Total Number of items</p>
     </div>
     <div id="container">
-      <!-- <div class="leftBox">
-        <h3 style="color: gray">FILTERS</h3>
-        <div class="filterCol">
-          <p class="filter">Category</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Size</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Brand</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Color</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Design</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Fit</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Sleeve</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Neck</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Ratings</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Discount</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-        <div class="filterCol">
-          <p class="filter">Sort By</p>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <hr />
-      </div> -->
-      <!-- <div class="leftBox"> -->
-      <!-- ///////// -->
-      <!-- ////// -->
+      <!-- leftBox -->
       <div class="side-bar">
         <h3 style="color: gray; font-size: 13px;">FILTERS</h3>
         <div class="menu">
@@ -391,14 +401,14 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <!-- <div id="footer"></div> -->
   </body>
 </html>
 <script>
   menData = [
     //1
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t320/outdoor-adventure-half-sleeve-t-shirt-483047-1648528732-1.jpg",
       name: `Outdoor Adventure Typography`,
       price: "299",
@@ -416,7 +426,7 @@
     },
     //2
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/outdoor-adventure-half-sleeve-t-shirt-483040-1648528754-1.jpg",
       name: `Adventure Typography`,
       price: "299",
@@ -434,7 +444,7 @@
     },
     //3
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1639137606-1.jpg",
       name: `Black T-shirt`,
       price: "349",
@@ -452,7 +462,7 @@
     },
     //4
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/marvel-s-moon-knight-half-sleeve-t-shirt-483814-1648618777-1.jpg",
       name: `Marvel Moon Knight `,
       price: "299",
@@ -470,7 +480,7 @@
     },
     //5
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/motd-panda-half-sleeve-t-shirt-479762-1646211112-1.jpg",
       name: `MOTD Panda T-shirt`,
       price: "299",
@@ -488,7 +498,7 @@
     },
     //6
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/gamer-respawn-half-sleeve-t-shirt-483046-1648447137-1.jpg",
       name: `Gamer Respawn Typography`,
       price: "299",
@@ -506,7 +516,7 @@
     },
     //7
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/hang-loose-relax-half-sleeve-t-shirt-387407-1640087741-1.jpg",
       name: `Black Relax T-shirt`,
       price: "399",
@@ -524,7 +534,7 @@
     },
     //8
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/psy-glow-half-sleeve-t-shirt-482684-1648181945-1.jpg",
       name: `PSY Glow T-shirt
     `,
@@ -543,7 +553,7 @@
     },
     //9
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/nasa-meatball-logo-480033-1647319218-1.jpg",
       name: `NASA Meatball Logo`,
       price: "399",
@@ -561,7 +571,7 @@
     },
     //10
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/jet-black-full-sleeve-t-shirt-1094-1637995554-1.jpg",
       name: `Full Sleeve T-Shirts`,
       price: "349",
@@ -579,7 +589,7 @@
     },
     //11
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/jet-black-vest-210687-1637995879-1.jpg",
       name: `Jet Black Vest`,
       price: "279",
@@ -597,7 +607,7 @@
     },
     //12
     {
-      mainImage:
+      mainImg:
         "https://images.bewakoof.com/t540/white-wolf-480065-1647976918-1.jpg",
       name: `Green White Wolf`,
       price: "399",
@@ -615,11 +625,12 @@
     },
     //repeat1
     //repeat2
+    //repeat3
   ];
 
   // calculating the total number of items
   var totalItems = menData.length;
-  console.log(totalItems);
+  // console.log(totalItems);
   // displaying the total number of items
   document.querySelector("#totalNum").innerText = `(${totalItems})`;
   // displaying the data
@@ -632,7 +643,7 @@
     })
     // getting image
     var image = document.createElement("img");
-    image.src = ele.mainImage;
+    image.src = ele.mainImg;
     // getting name
     var name = document.createElement("p");
     name.innerText = ele.name;
@@ -678,33 +689,12 @@
     window.location.href = "bookingPage.html";
   }
 
-  //
-  //trial
-  function bookingPage(ele){
-    var bookingItem=[{
-      mainImage:
-        "https://images.bewakoof.com/t540/white-wolf-480065-1647976918-1.jpg",
-      name: `Green White Wolf`,
-      price: "399",
-      strikeOffPrice: "999",
-      stock: "FEW LEFT",
-      offer: `299 For TriBe Members`,
-      subImages:{
-        subImgOne:
-          "https://images.bewakoof.com/t540/white-wolf-480065-1647976918-1.jpg",
-        subImgTwo:
-          "https://images.bewakoof.com/t540/white-wolf-480065-1647976921-2.jpg",
-        subImgThree:
-          "https://images.bewakoof.com/t540/white-wolf-480065-1647976929-4.jpg",
-        subImgFour:
-          "https://images.bewakoof.com/t540/white-wolf-480065-1647976932-5.jpg",
-      }
-    }];
-    bookingItem.push(ele)
-    localStorage.setItem('bookItem',JSON.stringify(bookingItem))
-    window.location.href = "bookingPage.html";
-  }
+// go to home
+document.querySelector(".p-logo").addEventListener("click", goToHome);
 
+function goToHome() {
+  window.location.href = "index.html";
+}
 </script>
 
 <script type="text/javascript">
