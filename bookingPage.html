@@ -280,7 +280,7 @@
     <!-- end of header -->
     <!-- <p>BOOKING PAGE</p> -->
     <!-- <div class="header"></div> -->
-    <p class="pageLocation">Location of the page</p>
+    <p class="pageLocation">Men page / Men T-shirt</p>
     <div class="container">
       <div class="leftBox">
         <div class="multiImg">
@@ -372,6 +372,8 @@
     var name = document.createElement("p");
     name.innerText = ele.name;
     document.querySelector(".name").append(name);
+    //
+    // document.querySelector(".pageLocation").append(name);
     //// getting price
     var price = document.createElement("p");
     price.innerText = ele.price;
@@ -462,9 +464,11 @@
     window.location.reload();
   }
 
-  // go to home
-  document.querySelector(".p-logo").addEventListener("click", goToHome);
-  function goToHome() {
-    window.location.href = "index.html";
-  }
+  //location of the file
+  // var location = document.querySelector(".pageLocation").innerText;
+  // console.log(location);
+
+  // var location = document.querySelector(".pageLocation");
+  // location.innerText = item[0]["name"];
+  // console.log(item[0]["name"]);
 </script>
