@@ -15,10 +15,8 @@ function formd() {
   console.log(document.querySelector("#search").value);
 }
 
-document.querySelector("toMenPage").addEventListener("click", goToMen);
+// document.querySelector(".p-logo").addEventListener("click", goToHome);
 
-document.querySelector(".p-logo").addEventListener("click", goToHome);
-
-function goToHome() {
-  window.location.href = "index.html";
-}
+// function goToHome() {
+//   window.location.href = "./index.html";
+// }

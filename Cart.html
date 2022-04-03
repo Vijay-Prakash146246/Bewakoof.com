@@ -381,7 +381,10 @@
      <div id="t1Container">
           <div>
                <!-- src="D:\Unit2D-Proj\img\H1.png" -->
-               <img id="t1img" src="img\bewakooflogo.png" alt="TopHeading Img"  >
+               <a href="./index.html">
+                    
+                    <img id="t1img" src="img\bewakooflogo.png" alt="TopHeading Img"  >
+               </a>
           </div>
           <div id="signupLogo">
                <p style="color: #bdd4e5; font-size: 13px;font-weight: 300;"> Signed as</p>
@@ -473,7 +476,7 @@
      var totalS = cartData.reduce(function(sum,el,i,arr){
           return (sum+Number(el.strikeOffPrice));
      },0);
-     console.log(totalS);
+     // console.log(totalS);
 
      
      // document.querySelector("#discount").addEventListener("click",promoFun);
@@ -525,7 +528,7 @@ function triBeFun()
 
      cartData.map(function(el,i,arr)
      {
-          console.log(el,i);
+          // console.log(el,i);
           var box = document.createElement("div");
 
           var box1 = document.createElement("div");
@@ -663,7 +666,7 @@ function triBeFun()
            dP1.innerText="Bag Discount ";
            var dP2=document.createElement("p");
            dP2.innerText="- ₹"+(totalS-total);
-           console.log(dP2);
+          //  console.log(dP2);
            discountP.append(dP1,dP2);
            discountP.style.display="flex";
            discountP.style.justifyContent="space-between";
@@ -821,7 +824,7 @@ function addToCart(el,i)
   //Here we basically remove item from wishlist
           // console.log(el,i);
               var x= wishListData.splice(i,1);
-              console.log(x);
+          //     console.log(x);
               localStorage.setItem("wishList",JSON.stringify(wishListData));
               window.location.reload(); //iss sa remove karna k baad page refresh ho jaata hai aur content update ho jaata hai
 
@@ -929,7 +932,7 @@ function futureBuying(el,i)
 //Here we basically remove item from wishlist
           // console.log(el,i);
           var x= wishListData.splice(i,1);
-              console.log(x);
+          //     console.log(x);
           //     localStorage.setItem("wishList",JSON.stringify(wishListData));
               window.location.reload(); //iss sa remove karna k baad page refresh ho jaata hai aur content update ho jaata hai
 
@@ -957,9 +960,9 @@ function futureBuying(el,i)
 
      function removeItem(el,i)
          {
-              console.log(el,i);
+          //     console.log(el,i);
               var x= cartData.splice(i,1);
-              console.log(x);
+          //     console.log(x);
               localStorage.setItem("cart",JSON.stringify(cartData));
               window.location.reload(); //iss sa remove karna k baad page refresh ho jaata hai aur content update ho jaata hai
          }
@@ -974,9 +977,9 @@ function addWishList(el,i)
      alert("Item Moved in WishList");
 //removing the data from cart section
 
-              console.log(el,i);
+          //     console.log(el,i);
               var x= cartData.splice(i,1);
-              console.log(x);
+          //     console.log(x);
               localStorage.setItem("cart",JSON.stringify(cartData));
               window.location.reload(); //iss sa remove karna k baad page refresh ho jaata hai aur content update ho jaata hai
 
@@ -992,10 +995,6 @@ imgFooter.src="https://images.bewakoof.com/web/secure-payments-image.png"
 document.querySelector("#itemData").append(imgFooter);
 imgFooter.setAttribute("id","imgFooter");
 
-// go to home
-document.querySelector(".p-logo").addEventListener("click", goToHome);
 
-function goToHome() {
-  window.location.href = "index.html";
-}
+
 </script>
