@@ -1133,15 +1133,15 @@ var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
         offerDiv.innerText = item.offer ;
         offerDiv.style.backgroundColor = "#f4f4f4" ;
 
-        button = document.createElement("button")
-        button.innerText = "Add To Cart" ;
-        button.addEventListener("click",function(){
-          localStoreItem(item)
-        })
+        // button = document.createElement("button")
+        // button.innerText = "Add To Cart" ;
+        // button.addEventListener("click",function(){
+        //   localStoreItem(item)
+        // })
 
 
 
-        productDiv.append(img,h3,span,span2,offerDiv,button)
+        productDiv.append(img,h3,span,span2,offerDiv)
         document.querySelector("#product_container").append(productDiv)
        })
 
