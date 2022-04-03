@@ -175,6 +175,9 @@
       .stikeOffPrice {
         color: gray;
         text-decoration: line-through;
+        /* padding-left: 10px; */
+      }
+      .rupeeLogo {
         padding-left: 10px;
       }
       .discount {
@@ -193,6 +196,9 @@
       .pageLocation {
         margin-left: 180px;
         margin-top: 20px;
+      }
+      .heart {
+        width: 40px;
       }
     </style>
   </head>
@@ -289,7 +295,9 @@
         <h2 class="company">BEWAKOOF</h2>
         <p class="name"></p>
         <div class="priceDiv">
+          <p class="rupeeLogo">₹</p>
           <p class="price"></p>
+          <p class="rupeeLogo">₹</p>
           <p class="stikeOffPrice"></p>
           <p class="discount"></p>
         </div>
@@ -316,8 +324,9 @@
         </div>
         <div class="bagDiv">
           <!-- heart -->
-          <div>
-            <i class="fa-thin fa-heart"></i>
+          <div class="">
+            <!-- <i class="fa-thin fa-heart"></i> -->
+            <i class="fa fa-heart-o heart" aria-hidden="true"></i>
           </div>
           <div class="addToBag">ADD TO BAG</div>
         </div>
@@ -454,8 +463,8 @@
   }
 
   // go to home
-document.querySelector(".p-logo").addEventListener("click", goToHome);
-function goToHome() {
-  window.location.href = "index.html";
-}
+  document.querySelector(".p-logo").addEventListener("click", goToHome);
+  function goToHome() {
+    window.location.href = "index.html";
+  }
 </script>
