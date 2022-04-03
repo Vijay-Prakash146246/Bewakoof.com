@@ -68,6 +68,141 @@ button:hover{
   color: rgb(43, 64, 64);
 }
 
+
+#topbar{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    font-family:montserrat,sans-serif; 
+    position: sticky; 
+    top:0; 
+}
+#topbar a:hover{
+color:gray;
+
+}
+/* left part */
+.left{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #eee;
+        height: 20px;
+        box-sizing: border-box;
+        padding: 3px;
+        margin-left: -140px;
+        font-size: 12px;  
+}
+.left a{
+text-decoration: none;
+color: #333333;
+margin: 14px;
+}
+
+/* right part */
+.right{
+    display: flex;
+    justify-content: right;
+    background-color: #eee;
+    box-sizing: border-box;
+    height: 20px;
+    padding: 3px;
+    font-size: 12px;
+}
+.right a{
+    text-decoration: none;
+    color:#333333;
+    margin-right: 3rem;
+}
+/* Navbar */
+
+#navbar{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 0px;
+    padding-top:5px;
+    font-family:montserrat,sans-serif;
+    border-bottom: #5c5a5a 1px solid;
+    background-color:white;
+    position: sticky;
+    top:20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#navbar a:hover{
+    color: cyan;
+}
+.navleft{
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    
+    
+}
+#p-logo{
+    margin-top: 0px;
+}
+#p-logo img{
+    width: 150px;
+    height: 20px;
+    padding: 2px;
+    margin-bottom: 3px;
+}
+.navleft a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.Msub-menu{
+    display:none;
+    margin-top: 20px;
+    position: sticky;
+    top:30px;
+}
+.navleft a:hover+.Msub-menu{
+display: block;
+position: absolute;
+background-color:rgb(250, 195, 15);
+opacity: 0.7;
+color: BLACK;
+position:stiky;
+}
+.Msub-menu ul{
+    list-style: none;
+    display: block;
+    margin-top: 15px ;
+    
+}
+.Msub-menu ul li{
+    width: 150px;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    
+}
+.Msub-menu ul h4{
+ text-align: center;
+ border-bottom: 1px dotted;
+}
+
+.navright{
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+    box-sizing: border-box;
+    padding: 7px;
+    margin-bottom: px;
+    margin-top: 0px;
+    
+}
+.navright a{
+    text-decoration: none;
+    font-size:14px;
+    color: #333333;
+    margin: 15px;
+}
+
 @media only  screen and (min-width:70px) and (max-width:720px){
 
   #product_container{
@@ -90,6 +225,47 @@ button:hover{
     </style>
 </head>
 <body>
+
+  <div id="topbar">
+    <div class="left">
+        <div>
+            <a href="">Offer</a>
+            <a href="">Fanbook</a>
+            <a href=""><i class="fa fa-mobile" aria-hidden="true"></i>
+                Download app</a>
+            <a href="">TriBe Membership</a>
+        </div>
+    </div>
+    
+</div>
+
+<div id="navbar">
+    <div class="navleft">
+        <div id="p-logo">
+            <a href="menPage.html"><img src="./image/bewakoof-primary-logo-white-bg-2x-1635745564.png" alt=""></a>
+        </div>
+        <div>
+            <a href="menPage.html">MEN</a>
+            <div class="Msub-menu">
+                <ul> <h3>Top Wears</h3>
+                    <li>T-Shirts</li>
+                    <li>Shirts</li>
+                    <li>Jackets</li>
+                    <li>Sweater</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a href="womenPage.html">WOMEN</a>
+        </div>
+        <div>
+            <a href="Mobile_main_page.html">MOBILE COVERS</a>
+        </div>
+    </div>
+   
+</div>
+
+
 <div id="bigContainer">
     <div><h1>Redmi 9 Power Back Covers & Cases <span id="countcol"><span>(</span><span id="count"></span><span>)</span></span> <hr></h1> 
     <div id="product_container">
